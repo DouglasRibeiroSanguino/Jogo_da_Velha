@@ -81,8 +81,8 @@ class GameActivity : AppCompatActivity() {
     }
 
     private fun updatePoints() {
-        player1Points.text = "Player X Points: ${gameManager.player1Points}"
-        player2Points.text = "Player O Points: ${gameManager.player2Points}"
+        player1Points.text = "Pontos do Player 1: ${gameManager.player1Points}"
+        player2Points.text = "Pontos do Player 2: ${gameManager.player2Points}"
     }
 
 
