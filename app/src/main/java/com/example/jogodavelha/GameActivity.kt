@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 
@@ -13,6 +14,7 @@ class GameActivity : AppCompatActivity() {
 
     lateinit var restartButton: Button
     private lateinit var progressDialog: ProgressDialog
+    private var backPressedTime = 0L
 
     private lateinit var gameManager: GameManager
     private lateinit var one: TextView
@@ -27,6 +29,7 @@ class GameActivity : AppCompatActivity() {
     private lateinit var startNewGameButton: Button
     private lateinit var player1Points: TextView
     private lateinit var player2Points: TextView
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -71,6 +74,7 @@ class GameActivity : AppCompatActivity() {
                 setMessage("Please Wait...")
                 setCancelable(false)
                 show()
+                finish()
             }
 
             val intent = Intent(this, GameActivity::class.java)
@@ -160,5 +164,15 @@ class GameActivity : AppCompatActivity() {
         winningBoxes.forEach { box ->
             box.background = ContextCompat.getDrawable(GameActivity@this, background)
         }
+    }
+
+    override fun onBackPressed() {
+        if (backPressedTime + 2000 > System.currentTimeMillis()) {
+            super.onBackPressed()
+        } else {
+            Toast.makeText(applicationContext, "Pressione novamente para voltar",
+                Toast.LENGTH_SHORT).show()
+        }
+        backPressedTime = System.currentTimeMillis()
     }
 }
