@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Jogo Da Velha</string>
+    <string name="jogo_da_velha">Jogo da Velha</string>
+    <string name="novo_jogo">Novo Jogo</string>
+    <string name="pontos_do_player_1">Pontos do Player 1:</string>
+    <string name="pontos_do_player_2">Pontos do Player 2:</string>
+    <string name="reiniciar">Reiniciar</string>
+    <string name="contentdescription_splash_screen">contentDescription_splash_screen</string>
+</resources>
