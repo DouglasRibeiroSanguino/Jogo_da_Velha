@@ -70,6 +70,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         restartRoundButton.setOnClickListener {
+            startNewGameButton.visibility = View.GONE
             gameManager.reset()
             resetboxes()
         }
