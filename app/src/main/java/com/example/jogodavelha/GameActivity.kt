@@ -79,7 +79,7 @@ class GameActivity : AppCompatActivity() {
 
             progressDialog = ProgressDialog(this)
             with(progressDialog) {
-                setMessage("Please Wait...")
+                setMessage("Please Wait....")
                 setCancelable(false)
                 show()
                 finish()
