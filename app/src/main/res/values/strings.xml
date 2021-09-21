@@ -4,6 +4,7 @@
     <string name="novo_jogo">Novo Jogo</string>
     <string name="pontos_do_player_1">Pontos do Player 1:</string>
     <string name="pontos_do_player_2">Pontos do Player 2:</string>
-    <string name="reiniciar">Reiniciar</string>
+    <string name="zerar">Zerar Pontos</string>
     <string name="contentdescription_splash_screen">contentDescription_splash_screen</string>
+    <string name="reiniciar_rodada">Reiniciar Rodada</string>
 </resources>

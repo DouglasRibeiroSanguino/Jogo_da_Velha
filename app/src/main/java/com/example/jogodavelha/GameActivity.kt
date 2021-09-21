@@ -13,6 +13,7 @@ import androidx.core.content.ContextCompat
 class GameActivity : AppCompatActivity() {
 
     lateinit var restartButton: Button
+    lateinit var restartRoundButton: Button
     private lateinit var progressDialog: ProgressDialog
     private var backPressedTime = 0L
 
@@ -36,6 +37,7 @@ class GameActivity : AppCompatActivity() {
         setContentView(R.layout.activity_game)
 
         restartButton = findViewById(R.id.restart)
+        restartRoundButton = findViewById(R.id.restart_round)
         gameManager = GameManager()
 
         one = findViewById(R.id.one)
@@ -67,6 +69,11 @@ class GameActivity : AppCompatActivity() {
             resetboxes()
         }
 
+        restartRoundButton.setOnClickListener {
+            gameManager.reset()
+            resetboxes()
+        }
+
         restartButton.setOnClickListener {
 
             progressDialog = ProgressDialog(this)
@@ -82,6 +89,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         updatePoints()
+
     }
 
     private fun updatePoints() {
